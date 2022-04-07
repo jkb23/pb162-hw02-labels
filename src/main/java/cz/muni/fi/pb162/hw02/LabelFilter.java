@@ -29,7 +29,7 @@ public interface LabelFilter {
      *
      * @return matching items from either iterable
      */
-    Collection<HasLabels> union(Iterable<HasLabels> fst, Iterable<HasLabels> snd);
+    Collection<HasLabels> joined(Iterable<HasLabels> fst, Iterable<HasLabels> snd);
 
 
     /**

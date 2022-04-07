@@ -25,9 +25,9 @@ public class LabelExpressionFilterTest extends AbstractLabelExpressionFilterTest
 
     @Test
     public void shouldFilterUnion() {
-        expectFiltered(LabelFilter::union, news, fishArticles, "fish", articles(1, 3, 5));
-        expectFiltered(LabelFilter::union, news, fishArticles, "fish & News", articles(1));
-        expectFiltered(LabelFilter::union, news, fishArticles, "fish | dogs", articles(1, 2, 3, 5));
+        expectFiltered(LabelFilter::joined, news, fishArticles, "fish", articles(1, 3, 5));
+        expectFiltered(LabelFilter::joined, news, fishArticles, "fish & News", articles(1));
+        expectFiltered(LabelFilter::joined, news, fishArticles, "fish | dogs", articles(1, 2, 3, 5));
     }
 
     @Test
