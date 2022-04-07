@@ -33,7 +33,7 @@ public class LabelExpressionMatcherTest extends AbstractLabelExpressionMatcherTe
 
     @Test
     public void shouldMatchAll() {
-        expectArticlesToMatch(LabelMatcher::all, true, "!plants | fish & News");
+        expectArticlesToMatch(LabelMatcher::all, true, "!plants | fish & News | Story");
         expectArticlesToMatch(LabelMatcher::all, true, "News & !plants | fish");
         expectArticlesToMatch(LabelMatcher::all, true, "animals | plants | society | Nature");
         expectArticlesToMatch(LabelMatcher::any, true, "animals & fish | News & fish | !plants | Society");

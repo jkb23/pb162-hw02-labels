@@ -2,7 +2,6 @@ package cz.muni.fi.pb162.hw02.impl;
 
 import cz.muni.fi.pb162.hw02.HasLabels;
 import cz.muni.fi.pb162.hw02.LabelFilter;
-import cz.muni.fi.pb162.hw02.impl.data.Article;
 import org.assertj.core.api.SoftAssertions;
 import org.assertj.core.api.junit.jupiter.InjectSoftAssertions;
 import org.assertj.core.api.junit.jupiter.SoftAssertionsExtension;
@@ -12,41 +11,25 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
+
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.BEES;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.DOGS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.MOBY;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.PLANTS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.POOH;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.SHARKS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.STING;
 
 @ExtendWith(SoftAssertionsExtension.class)
 public abstract class AbstractLabelExpressionFilterTest {
 
-    protected static final List<HasLabels> articles = List.of(
-            new Article("About Bees", Set.of("News", "animals", "bees", "Nature")),// 0
-            new Article("Fish eating plants", Set.of("News", "Nature", "plants", "fish")),// 1
-            new Article("Man's Best Friend", Set.of("News", "animals", "Society", "dogs")), // 2
-            new Article("The Great Whites", Set.of("Story", "fish", "Nature", "animals")), // 3
-            new Article("That's Gonna Sting!", Set.of("News", "animals", "bees", "Health")),// 4
-            new Article("Moby-Dick Strikes Back", Set.of("Story", "fish", "Nature", "animals", "Society")), //5
-            new Article("Blame the Pooh", Set.of("Story", "animals", "honey", "bees", "bears")) // 6
-    );
+    protected static final List<HasLabels> articles = List.of(BEES, PLANTS, DOGS, SHARKS, STING, MOBY, POOH);
+    protected static final List<HasLabels> news = List.of(BEES, PLANTS, DOGS, STING);
+    protected static final List<HasLabels> fishArticles = List.of(PLANTS, SHARKS, MOBY);
+    protected static final List<HasLabels> beeArticles = List.of(BEES, STING, POOH);
 
-    protected static final List<HasLabels> news = List.of(
-            articles.get(0), // "About Bees"
-            articles.get(1), // "Fish eating plants"
-            articles.get(2), // "Man's Best Friend"
-            articles.get(4)  // "That's Gonna Sting!"
-    );
-
-    protected static final List<HasLabels> fishArticles = List.of(
-            articles.get(1), // "Fish eating plants"
-            articles.get(3), // "The Great Whites"
-            articles.get(5)  // "Moby-Dick Strikes Back"
-    );
-
-    protected static final List<HasLabels> beeArticles = List.of(
-            articles.get(0), // "About Bees"
-            articles.get(4), // That's Gonna Sting!"
-            articles.get(6)  // "Blame the Pooh"
-    );
     @InjectSoftAssertions
     SoftAssertions softly;
 

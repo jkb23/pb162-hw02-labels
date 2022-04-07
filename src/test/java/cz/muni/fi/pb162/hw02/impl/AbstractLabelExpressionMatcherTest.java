@@ -2,27 +2,26 @@ package cz.muni.fi.pb162.hw02.impl;
 
 import cz.muni.fi.pb162.hw02.HasLabels;
 import cz.muni.fi.pb162.hw02.LabelMatcher;
-import cz.muni.fi.pb162.hw02.impl.data.Article;
 import org.assertj.core.api.SoftAssertions;
 import org.assertj.core.api.junit.jupiter.InjectSoftAssertions;
 import org.assertj.core.api.junit.jupiter.SoftAssertionsExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.List;
-import java.util.Set;
 import java.util.function.BiFunction;
+
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.BEES;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.DOGS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.FERRETS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.PLANTS;
+import static cz.muni.fi.pb162.hw02.impl.data.Articles.SHARKS;
 
 @ExtendWith(SoftAssertionsExtension.class)
 public abstract class AbstractLabelExpressionMatcherTest {
 
-    protected static final HasLabels article = new Article("Do Ferrets bite?", Set.of("animals", "Nature"));
+    protected static final HasLabels article = FERRETS;
 
-    protected static final List<HasLabels> articles = List.of(
-            new Article("About Bees", Set.of("News", "animals", "bees", "Nature")),
-            new Article("Fish Eating Plants", Set.of("News", "Nature", "plants", "fish")),
-            new Article("Man's Best Friend", Set.of("News", "animals", "Society", "dogs")),
-            new Article("The Great Whites", Set.of("News", "fish", "Nature", "animals"))
-    );
+    protected static final List<HasLabels> articles = List.of(BEES, PLANTS, DOGS, SHARKS);
 
     @InjectSoftAssertions
     SoftAssertions softly;
