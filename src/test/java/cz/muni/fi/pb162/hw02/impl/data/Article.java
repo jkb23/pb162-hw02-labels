@@ -1,4 +1,4 @@
-package cz.muni.fi.pb162.hw02.impl;
+package cz.muni.fi.pb162.hw02.impl.data;
 
 import cz.muni.fi.pb162.hw02.HasLabels;
 

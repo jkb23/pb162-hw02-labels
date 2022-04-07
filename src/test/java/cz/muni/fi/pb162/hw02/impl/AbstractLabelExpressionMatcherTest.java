@@ -2,6 +2,7 @@ package cz.muni.fi.pb162.hw02.impl;
 
 import cz.muni.fi.pb162.hw02.HasLabels;
 import cz.muni.fi.pb162.hw02.LabelMatcher;
+import cz.muni.fi.pb162.hw02.impl.data.Article;
 import org.assertj.core.api.SoftAssertions;
 import org.assertj.core.api.junit.jupiter.InjectSoftAssertions;
 import org.assertj.core.api.junit.jupiter.SoftAssertionsExtension;
