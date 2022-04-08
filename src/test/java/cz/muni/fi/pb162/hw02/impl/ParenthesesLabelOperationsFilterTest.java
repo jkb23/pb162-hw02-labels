@@ -13,7 +13,7 @@ public class ParenthesesLabelOperationsFilterTest extends AbstractLabelOperation
     @Override
     protected void shouldThrowOnExpr(String expr) {
         var exception = catchException(
-                () -> LabeledOperations.expressionMatcher(expr)
+                () -> LabeledOperations.expressionFilter(expr)
         );
         assertThat(exception).isInstanceOf(InvalidExpressionException.class);
         assertThat(exception).hasMessage(expr);

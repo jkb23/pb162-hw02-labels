@@ -17,7 +17,7 @@ public class ParenthesesLabelExpressionMatcherTest extends AbstractLabelExpressi
     @Test
     public void shouldMatchAll() {
         expectArticlesToMatch(LabelMatcher::all, "!plants | (Nature & fish)");
-        expectArticlesToMatch(LabelMatcher::all, "News & (!plants | fish)");
+        expectArticlesToMatch(LabelMatcher::all, "(News | Story) & (!plants | fish)");
         expectArticlesToMatch(LabelMatcher::any, "(animals & fish) | (News & (fish | !plants)) | Society");
     }
 
