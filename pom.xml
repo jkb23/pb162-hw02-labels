@@ -14,17 +14,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <checkstyle.fail>true</checkstyle.fail>
         <!-- dependency versions -->
-        <version.plugin.shade>3.2.2</version.plugin.shade>
         <version.plugin.surefire>2.22.2</version.plugin.surefire>
         <version.plugin.site>3.11.0</version.plugin.site>
         <version.plugin.checkstyle>3.1.2</version.plugin.checkstyle>
         <version.plugin.source>2.4</version.plugin.source>
         <version.junit.platform>1.8.2</version.junit.platform>
         <version.junit.jupiter>5.8.2</version.junit.jupiter>
-        <version.mockito>4.3.1</version.mockito>
         <version.assertj>3.22.0</version.assertj>
-        <version.jcommander>1.82</version.jcommander>
-        <version.system-labda>1.2.1</version.system-labda>
     </properties>
 
     <dependencies>
@@ -44,30 +40,6 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${version.assertj}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${version.mockito}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-inline</artifactId>
-            <version>${version.mockito}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>${version.mockito}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.stefanbirkner</groupId>
-            <artifactId>system-lambda</artifactId>
-            <version>${version.system-labda}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
