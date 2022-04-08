@@ -101,7 +101,7 @@ The structure of the project provided as a base for your implementation should m
 2. Package  ```cz.muni.fi.pb162.hw02.impl``` should contain your implementation.
 
 - **Anything outside this package will be ignored during evaluation.**
-- **Do not change the interface of ``NatureOperations``` class, you should only implement declared methods**
+- **Do not change the interface of ``LabeledOperations``` class, you should only implement declared methods**
 
 ### Names in this document
 
@@ -140,5 +140,5 @@ submit ```target/homework02-2022-1.0-SNAPSHOT-sources.jar``` to the homework vau
 
 ## Implementation
 
-Your solutions must keep and finish the implementation of ``NatureOperations`` factory class.
+Your solutions must keep and finish the implementation of ``LabeledOperations`` factory class.
 
