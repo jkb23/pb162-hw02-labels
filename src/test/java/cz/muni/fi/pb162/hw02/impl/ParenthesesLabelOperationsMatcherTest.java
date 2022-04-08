@@ -33,4 +33,9 @@ public class ParenthesesLabelOperationsMatcherTest extends AbstractLabelOperatio
     public void shouldThrowOnInvalidExprWithMismatchedParentheses() {
         shouldThrowOnExpr("(label | (foo)");
     }
+
+    @Test
+    public void shouldThrowOnInvalidExprWithMissingLhsInParentheses() {
+        shouldThrowOnExpr("(& label)");
+    }
 }

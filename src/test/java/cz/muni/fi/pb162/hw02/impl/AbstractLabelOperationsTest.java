@@ -35,9 +35,4 @@ public abstract class AbstractLabelOperationsTest {
     public void shouldThrowOnInvalidExprWithMissingLhs() {
         shouldThrowOnExpr("& label");
     }
-
-    @Test
-    public void shouldThrowOnInvalidExprWithMissingLhsInParentheses() {
-        shouldThrowOnExpr("(& label)");
-    }
 }
