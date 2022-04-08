@@ -17,8 +17,8 @@ public final class Articles {
             = new Article("Moby-Dick Strikes Back", Set.of("Story", "fish", "Nature", "animals", "Society"));
     public static final Article POOH
             = new Article("Blame the Pooh", Set.of("Story", "animals", "honey", "bees", "bears")) ;
-    public static final Article FERRETS =
-            new Article("Do Ferrets bite?", Set.of("animals", "Nature"));
+    public static final Article FERRETS
+            = new Article("Do Ferrets bite?", Set.of("animals", "Nature"));
 
     private Articles() {
         // intentionally private
