@@ -14,10 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- dependency versions -->
         <version.plugin.surefire>2.22.2</version.plugin.surefire>
-        <version.plugin.site>3.11.0</version.plugin.site>
         <version.plugin.checkstyle>3.1.2</version.plugin.checkstyle>
         <version.plugin.source>2.4</version.plugin.source>
-        <version.junit.platform>1.8.2</version.junit.platform>
         <version.junit.jupiter>5.8.2</version.junit.jupiter>
         <version.assertj>3.22.0</version.assertj>
     </properties>
@@ -27,12 +25,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${version.junit.jupiter}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-suite</artifactId>
-            <version>${version.junit.platform}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -49,6 +41,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>${version.plugin.source}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
