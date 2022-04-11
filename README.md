@@ -2,14 +2,20 @@ Homework assignment no. 2, Labels
 ====================================
 
 **Publication date:**  April 8rd, 2022
-
 **Submission deadline:** April 29th, 2022
+**Point:** 12 points maximum (7 for functionally correct solution, 5 for architecture)
+**Bonus Points:** 3 (can only compensate lost points from homeworks and iterations)
 
-General information
+Change Log
+-----------
+* 11.4: Added point information and note about operators in grammar section 
+* 11.4: Test cleanup
+
+General Information
 -------------------
 The goal of this homework is to implement a library capable of matching and filtering labeled items based on a simplified boolean expressions.
 
-### Labeled object
+### Labeled Object
 
 Labeled object is an instance of class implementing the provided ``HasLabels`` interface.
 
@@ -55,6 +61,8 @@ space   =   ? zero or more space characters ? ;
 ```
 
 *Note: I fully admit that the grammar may be flawed*
+
+*Important:* For simplicity, both operations `&` and `|` are left associative with the same operator priority.   
 
 ### Bonus Assignment
 

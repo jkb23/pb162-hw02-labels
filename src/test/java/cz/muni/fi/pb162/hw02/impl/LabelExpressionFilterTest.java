@@ -35,9 +35,6 @@ public class LabelExpressionFilterTest extends AbstractLabelExpressionFilterTest
         expectFiltered(LabelFilter::distinct, news, fishArticles, "fish & news | !bees | dogs", articles(2, 3, 5));
         expectFiltered(LabelFilter::distinct, fishArticles, articles, "fish & !bees | dogs", articles(2));
         expectFiltered(LabelFilter::distinct, fishArticles, beeArticles, "!fish & !bees", articles());
-        expectFiltered(LabelFilter::intersection, articles, beeArticles, "Story", articles(6));
-        expectFiltered(LabelFilter::intersection, articles, fishArticles, "Story", articles(3, 5));
-        expectFiltered(LabelFilter::intersection, beeArticles, fishArticles, "Story", articles());
     }
 
     @Test
