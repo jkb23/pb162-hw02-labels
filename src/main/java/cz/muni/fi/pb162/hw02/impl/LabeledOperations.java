@@ -18,11 +18,16 @@ public final class LabeledOperations {
      * which matches based on given expression.
      *
      * @param expression expression for which the matcher is created
-     * @throws InvalidExpressionException if expression is not valid
      * @return expression-based label matcher
+     * @throws InvalidExpressionException if expression is not valid
      */
     public static LabelMatcher expressionMatcher(String expression) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Validator validator = new Validator(expression);
+        if (!validator.validate()){
+            throw new InvalidExpressionException(expression);
+        }
+
+        return new LabelMatcherImpl(expression);
     }
 
     /**
@@ -34,6 +39,11 @@ public final class LabeledOperations {
      * @return expression-based label filter
      */
     public static LabelFilter expressionFilter(String expression) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Validator validator = new Validator(expression);
+        if (!validator.validate()){
+            throw new InvalidExpressionException(expression);
+        }
+
+        return new LabelFilterImpl(expression);
     }
 }
